@@ -4,6 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/svg-scroll-animation.svg)](https://www.npmjs.com/package/svg-scroll-animation) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+[demo](https://hx-cloud-stg.geniam.com/innerverse-journey)
 ## Install
 
 ```bash
