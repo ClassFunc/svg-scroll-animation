@@ -1,0 +1,11 @@
+.container {
+  position: relative;
+  height: 500vh;
+}
+
+.content {
+  height: 100vh;
+  position: sticky;
+  inset: 0;
+  overflow: hidden;
+}
