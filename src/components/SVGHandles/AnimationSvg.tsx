@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Wrapper from "../Wrapper";
 import styles from "../../styles/SVGHandle.module.css";
 import { checkDisplay } from "../../utils/AnimationUtil";
-import { isFunction } from "lodash";
+import isFunction from "lodash/isFunction";
 
 interface Props {
   data: any[],
