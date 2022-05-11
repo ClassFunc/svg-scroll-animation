@@ -66,6 +66,15 @@ const apply = (action: any, element: any, percent: number, position: any, item: 
         element.setAttribute("y", `${position?.y + options.y / rangePercent * progressGlobal}`);
       }
       break;
+    case "translate2":
+      const xMoveC = options.x / rangePercent * progressGlobal;
+      const yMoveC = options.y / rangePercent * progressGlobal;
+      if (textTranslate.includes(item.type)) {
+        element.style.transform = `translate(${xMoveC}px,${yMoveC}px)`;
+      } else {
+        element.style.transform = `translate(${position?.x + xMoveC}px,${position?.y + yMoveC}px)`;
+      }
+      break;
     case "opacity":
       const rangeOpacity = options.end - options.start;
       const opacity = options.start + rangeOpacity / rangePercent * progressGlobal;
@@ -75,7 +84,6 @@ const apply = (action: any, element: any, percent: number, position: any, item: 
       const rangeOpacity2 = options.end - options.start;
       const opacity2 = options.start + rangeOpacity2 / rangePercent * progressGlobal;
 
-      console.log(percent + 1, range);
       if (opacity2 > 0.5) {
         element.style.transition = "500ms";
         element.style.opacity = 1;
