@@ -17,15 +17,6 @@ img {
   height: 100%
 }
 
-.cordemia-content {
-  animation: zoom-in-zoom-out 1s ease infinite;
-  transform-origin: 35% 95%;
-}
-
-.idamon-content {
-  animation: zoom-in-zoom-out 1s ease infinite;
-  transform-origin: 70% 95%;
-}
 
 @keyframes zoom-in-zoom-out {
   0% {
