@@ -75,6 +75,14 @@ const apply = (action: any, element: any, percent: number, position: any, item: 
         element.style.transform = `translate(${position?.x + xMoveC}px,${position?.y + yMoveC}px)`;
       }
       break;
+    case "translateTime":
+      if ( percent < range[0] + 1 ) {
+        element.style.transition = `${ action.time ? action.time : 1000 }ms`;
+        element.style.transform = `translate(${options.x}px,${options.y}px)`;
+      } else {
+        element.style.transform = `translate(0px,0px)`;
+      }
+      break;
     case "opacity":
       const rangeOpacity = options.end - options.start;
       const opacity = options.start + rangeOpacity / rangePercent * progressGlobal;
