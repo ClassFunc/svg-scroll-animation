@@ -1,205 +1,228 @@
+import React from "react";
+
 export const data = [
   //screen1
   {
-    type: "image",
+    type: "iframe",
     display: [0, 20],
-    actions: [
-      {
-        type: "scale",
-        range: [2, 8],
-        options: {
-          start: 1,
-          end: 1.3
-        }
-      },
-      {
-        type: "translate",
-        range: [2, 8],
-        options: {
-          x: -100,
-          y: -250
-        }
-      },
-      {
-        type: "opacity",
-        range: [8, 10],
-        options: {
-          start: 1,
-          end: 1
-        }
-      }
-    ],
-    src: "/images/InnerverseJourney/ThreePeople2/King.webp",
+    render: () => {
+      return <div>
+        <div className={"IFrame"}>
+          <iframe
+            src="https://player.vimeo.com/video/422883518?h=aee925f4ae&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen
+            title="Geniam Campaign"></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </div>;
+    },
     position: {
-      x: 200,
-      y: 318
+      x: 0,
+      y: 0
     },
-    width: 400
+    width: "100%",
+    height: "100%"
   },
-  {
-    type: "image",
-    display: [0, 20],
-    actions: [
-      {
-        type: "translate",
-        range: [2, 6],
-        options: {
-          x: 1300,
-          y: 0
-        }
-      },
-      {
-        type: "opacity",
-        range: [2, 6],
-        options: {
-          start: 1,
-          end: 0
-        }
-      }
-    ],
-    src: "/images/InnerverseJourney/ThreePeople2/FlowerMan.webp",
-    position: {
-      x: 760,
-      y: 318
-    },
-    width: 400
-  },
-  {
-    type: "image",
-    display: [0, 10],
-    actions: [
-      {
-        type: "translate",
-        range: [2, 6],
-        options: {
-          x: 1300,
-          y: 0
-        }
-      },
-      {
-        type: "opacity",
-        range: [2, 6],
-        options: {
-          start: 1,
-          end: 0
-        }
-      }
-    ],
-    src: "/images/InnerverseJourney/ThreePeople2/SuperMan.webp",
-    position: {
-      x: 1300,
-      y: 410
-    },
-    width: 400
-  },
-  {
-    type: "textCenter",
-    position: {
-      x: 960,
-      y: 200
-    },
-    display: [0, 6],
-    fontSize: 50,
-    fontWeight: "bold",
-    lines: ["3人の旅人"],
-    color: "white",
-    actions: [{
-      type: "opacity",
-      range: [2, 6],
-      options: {
-        start: 1,
-        end: 0
-      }
-    }]
-  },
-  //screen2
-  {
-    type: "text",
-    position: {
-      x: 980,
-      y: -100
-    },
-    display: [10, 20],
-    fontSize: 50,
-    fontWeight: "bold",
-    lines: ["1人目の旅人"],
-    color: "white",
-    actions: [
-      {
-        type: "opacity",
-        range: [10, 17],
-        options: {
-          start: 0,
-          end: 1
-        }
-      },
-      {
-        type: "translate",
-        range: [10, 17],
-        options: {
-          x: 0,
-          y: 300
-        }
-      }
-    ]
-  },
-  {
-    type: "text",
-    position: {
-      x: 1480,
-      y: 280
-    },
-    display: [10, 20],
-    fontSize: 30,
-    fontWeight: "bold",
-    lines: ["1人目の旅人は、目に見えるものが大好き。", "そして、目に見えないものは信じない。", "だからこそ、それなりに現実を作れてきた。", "しかし、内なる世界が未開拓で、ふと人生を俯瞰してみると", "「本当はなにしたいのか？」が分からない。"],
-    color: "white",
-    actions: [{
-      type: "opacity",
-      range: [10, 17],
-      options: {
-        start: 0,
-        end: 1
-      }
-    },
-      {
-        type: "translate",
-        range: [10, 17],
-        options: {
-          x: -500,
-          y: 0
-        }
-      }
-    ]
-  },
-  {
-    type: "image",
-    display: [10, 20],
-    actions: [
-      {
-        type: "opacity",
-        range: [10, 17],
-        options: {
-          start: 0,
-          end: 1
-        }
-      },
-      {
-        type: "translate",
-        range: [10, 17],
-        options: {
-          x: -700,
-          y: 0
-        }
-      }
-    ],
-    src: "/images/InnerverseJourney/ThreePeople2/Asset Earth.webp",
-    position: {
-      x: 1900,
-      y: 550
-    },
-    width: 400
-  },
+  // {
+  //   type: "image",
+  //   display: [0, 20],
+  //   actions: [
+  //     {
+  //       type: "scale",
+  //       range: [2, 8],
+  //       options: {
+  //         start: 1,
+  //         end: 1.3
+  //       }
+  //     },
+  //     {
+  //       type: "translate",
+  //       range: [2, 8],
+  //       options: {
+  //         x: -100,
+  //         y: -250
+  //       }
+  //     },
+  //     {
+  //       type: "opacity",
+  //       range: [8, 10],
+  //       options: {
+  //         start: 1,
+  //         end: 1
+  //       }
+  //     }
+  //   ],
+  //   src: "/images/InnerverseJourney/ThreePeople2/King.webp",
+  //   position: {
+  //     x: 200,
+  //     y: 318
+  //   },
+  //   width: 400
+  // },
+  // {
+  //   type: "image",
+  //   display: [0, 20],
+  //   actions: [
+  //     {
+  //       type: "translate",
+  //       range: [2, 6],
+  //       options: {
+  //         x: 1300,
+  //         y: 0
+  //       }
+  //     },
+  //     {
+  //       type: "opacity",
+  //       range: [2, 6],
+  //       options: {
+  //         start: 1,
+  //         end: 0
+  //       }
+  //     }
+  //   ],
+  //   src: "/images/InnerverseJourney/ThreePeople2/FlowerMan.webp",
+  //   position: {
+  //     x: 760,
+  //     y: 318
+  //   },
+  //   width: 400
+  // },
+  // {
+  //   type: "image",
+  //   display: [0, 10],
+  //   actions: [
+  //     {
+  //       type: "translate",
+  //       range: [2, 6],
+  //       options: {
+  //         x: 1300,
+  //         y: 0
+  //       }
+  //     },
+  //     {
+  //       type: "opacity",
+  //       range: [2, 6],
+  //       options: {
+  //         start: 1,
+  //         end: 0
+  //       }
+  //     }
+  //   ],
+  //   src: "/images/InnerverseJourney/ThreePeople2/SuperMan.webp",
+  //   position: {
+  //     x: 1300,
+  //     y: 410
+  //   },
+  //   width: 400
+  // },
+  // {
+  //   type: "textCenter",
+  //   position: {
+  //     x: 960,
+  //     y: 200
+  //   },
+  //   display: [0, 6],
+  //   fontSize: 50,
+  //   fontWeight: "bold",
+  //   lines: ["3人の旅人"],
+  //   color: "white",
+  //   actions: [{
+  //     type: "opacity",
+  //     range: [2, 6],
+  //     options: {
+  //       start: 1,
+  //       end: 0
+  //     }
+  //   }]
+  // },
+  // //screen2
+  // {
+  //   type: "text",
+  //   position: {
+  //     x: 980,
+  //     y: -100
+  //   },
+  //   display: [10, 20],
+  //   fontSize: 50,
+  //   fontWeight: "bold",
+  //   lines: ["1人目の旅人"],
+  //   color: "white",
+  //   actions: [
+  //     {
+  //       type: "opacity",
+  //       range: [10, 17],
+  //       options: {
+  //         start: 0,
+  //         end: 1
+  //       }
+  //     },
+  //     {
+  //       type: "translate",
+  //       range: [10, 17],
+  //       options: {
+  //         x: 0,
+  //         y: 300
+  //       }
+  //     }
+  //   ]
+  // },
+  // {
+  //   type: "text",
+  //   position: {
+  //     x: 1480,
+  //     y: 280
+  //   },
+  //   display: [10, 20],
+  //   fontSize: 30,
+  //   fontWeight: "bold",
+  //   lines: ["1人目の旅人は、目に見えるものが大好き。", "そして、目に見えないものは信じない。", "だからこそ、それなりに現実を作れてきた。", "しかし、内なる世界が未開拓で、ふと人生を俯瞰してみると", "「本当はなにしたいのか？」が分からない。"],
+  //   color: "white",
+  //   actions: [{
+  //     type: "opacity",
+  //     range: [10, 17],
+  //     options: {
+  //       start: 0,
+  //       end: 1
+  //     }
+  //   },
+  //     {
+  //       type: "translate",
+  //       range: [10, 17],
+  //       options: {
+  //         x: -500,
+  //         y: 0
+  //       }
+  //     }
+  //   ]
+  // },
+  // {
+  //   type: "image",
+  //   display: [10, 20],
+  //   actions: [
+  //     {
+  //       type: "opacity",
+  //       range: [10, 17],
+  //       options: {
+  //         start: 0,
+  //         end: 1
+  //       }
+  //     },
+  //     {
+  //       type: "translate",
+  //       range: [10, 17],
+  //       options: {
+  //         x: -700,
+  //         y: 0
+  //       }
+  //     }
+  //   ],
+  //   src: "/images/InnerverseJourney/ThreePeople2/Asset Earth.webp",
+  //   position: {
+  //     x: 1900,
+  //     y: 550
+  //   },
+  //   width: 400
+  // },
   {
     type: "image",
     display: [20, 30],
