@@ -571,6 +571,16 @@ const RenderContent = ({ percent, data, contentStyle, show = null, viewBox }: Co
                 </g>
               );
             }
+            if (item.type === "iframe" && typeof item.render === "function") {
+              return (
+                <foreignObject ref={item.ref} width={item.width} height={item.height}
+                               x={item.position.x} y={item.position.y} key={index}>
+                  <body data-xmlns="http://www.w3.org/1999/xhtml">
+                  {item.render()}
+                  </body>
+                </foreignObject>
+              );
+            }
             return null;
           })
         }
